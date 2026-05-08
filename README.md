@@ -53,3 +53,11 @@ information-security-final-project/
 ├── screenshots/
 ├── presentation/
 └── README.md
+
+---
+
+## Demo Video
+
+Project walkthrough video:
+
+https://drive.google.com/file/d/1hWVEZbpdNpR-UgFWsx9EotnaEElG-Ce5/view?usp=share_link
