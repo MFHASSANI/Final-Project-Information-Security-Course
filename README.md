@@ -124,7 +124,7 @@ information-security-final-project/
 git clone [https://github.com/MFHASSANI/-Secure-Password-Generator-Final-Project-for-Information-Security-Course.git](https://github.com/SamiJaberii/FinalProject-Information-Security.git)
 ```
 
-## Run Secure Password Generator
+## Run Simple Intrusion Detection System
 
 ```bash
 cd simple-intrusion-detection-system
