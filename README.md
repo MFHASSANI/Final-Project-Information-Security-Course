@@ -11,44 +11,47 @@
 
 This project was developed for the Information Security course and includes two related cybersecurity tools:
 
-1. Secure Password Generator  
+1. Simple Intrusion Detection System  
 2. File Integrity Monitoring System  
 
-The purpose of this project is to improve system security by generating strong passwords and monitoring important files for unauthorized modifications.
+The purpose of this project is to improve system security by detecting suspicious activity and monitoring important files for unauthorized modifications.
 
-The Secure Password Generator helps users create secure passwords with different complexity levels, password strength evaluation, symbol support, and secure random generation.
+The Simple Intrusion Detection System helps users monitor unusual activity such as failed login attempts, process changes, and suspicious processes. It also creates security alerts and saves them in a log file.
 
 The File Integrity Monitoring System uses SHA-256 hashing to detect file tampering, modifications, deleted files, and newly added files. The system also creates security logs and stores integrity hashes in a JSON database.
 
-Both projects are related because they focus on protecting systems, user authentication, and sensitive information.
+Both projects are related because they focus on protecting systems, detecting unauthorized activity, and securing sensitive information.
 
 ---
 
 # Problem It Solves
 
-Weak passwords and unauthorized file modifications are common security problems in computer systems.
+Unauthorized login attempts, suspicious process activity, and unauthorized file modifications are common security problems in computer systems.
 
 This project helps solve these problems by:
 
-- Generating strong and secure passwords
+- Detecting failed login attempts
+- Monitoring running system processes
+- Detecting new, stopped, or suspicious processes
 - Monitoring files using SHA-256 hashing
 - Detecting unauthorized modifications
 - Logging security events
-- Improving authentication and file integrity security
+- Improving system security and file integrity
 - Helping users protect sensitive information
 
 ---
 
 # Features
 
-## Secure Password Generator
+## Simple Intrusion Detection System
 
-- Strong password generation
-- Multiple complexity levels
-- Password strength evaluation
-- Symbol support
-- Multiple password generation
-- Save passwords to files
+- Failed login detection
+- Authentication log analysis
+- Process baseline creation
+- New process detection
+- Stopped process detection
+- Suspicious process detection
+- Security alert logging
 - Command-line support
 
 ## File Integrity Monitoring System
@@ -69,12 +72,15 @@ This project helps solve these problems by:
 
 - Python 3
 
-## Password Generator Libraries
+## Simple Intrusion Detection System Libraries
 
-- secrets
 - argparse
-- string
+- json
+- re
+- subprocess
+- sys
 - pathlib
+- datetime
 
 ## File Integrity Monitoring System Libraries
 
@@ -91,8 +97,11 @@ This project helps solve these problems by:
 ```text
 information-security-final-project/
 │
-├── password-generator/
-│   └── main.py
+├── simple-intrusion-detection-system/
+│   ├── main.py
+│   ├── process_baseline.json
+│   ├── ids_alerts.log
+│   └── sample_auth.log
 │
 ├── file-integrity-checker/
 │   ├── main.py
@@ -112,13 +121,13 @@ information-security-final-project/
 ## Clone Repository
 
 ```bash
-git clone https://github.com/MFHASSANI/-Secure-Password-Generator-Final-Project-for-Information-Security-Course.git
+git clone [https://github.com/MFHASSANI/-Secure-Password-Generator-Final-Project-for-Information-Security-Course.git](https://github.com/SamiJaberii/FinalProject-Information-Security.git)
 ```
 
 ## Run Secure Password Generator
 
 ```bash
-cd password-generator
+cd simple-intrusion-detection-system
 python3 main.py
 ```
 
@@ -137,10 +146,11 @@ Project screenshots are available in the `screenshots/` folder.
 
 Included screenshots:
 
-- Password generator banner
-- Password generation results
-- Password CLI usage examples
-- Password strength evaluation
+- IDS banner and main menu
+- IDS sample authentication log creation
+- IDS failed login detection
+- IDS process baseline creation
+- IDS alert log results
 - Integrity monitoring banner
 - Tampering detection results
 
@@ -156,7 +166,7 @@ The final project presentation is available in the `presentation/` folder.
 
 ## Project Walkthrough Video
 
-[Click here to watch the demo video](https://drive.google.com/file/d/1hWVEZbpdNpR-UgFWsx9EotnaEElG-Ce5/view?usp=share_link)
+[Click here to watch the demo video](https://drive.google.com/file/d/15q4SxVwViBmmEcwesXhcYqQIwxz6yNG3/view?usp=drive_link)
 
 ---
 
@@ -164,7 +174,7 @@ The final project presentation is available in the `presentation/` folder.
 
 This project successfully demonstrates important Information Security concepts using Python.
 
-The Secure Password Generator improves authentication security by helping users create strong passwords.
+The Simple Intrusion Detection System improves system security by helping users detect failed login attempts, process changes, and suspicious activity.
 
 The File Integrity Monitoring System protects important files using SHA-256 hashing and tampering detection.
 
